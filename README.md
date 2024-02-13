@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# Krzysztof Biolik To-do list
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Demo
+
+You can see how the to-do list works in the gif below.
+
+![Gif](https://github.com/KrzysztofBiolik/To-do-list-Krzysztof-Biolik/blob/main/images/to-do%20list%20gif.gif?raw=true)
+
+You can try for yourself how the currency exchange works at this link.
+
+[To-do list link]()
+
+## How does the to-do list work?
+
+The to-do list web page is a form that has one field for entering new tasks and a button that, when clicked, adds a new task and automatically sets the focus to the form field to be able to enter new tasks. The entered tasks appear in the form of a list, and each of them has two interaction buttons. The first button allows you to toggle the execution of the task. Completed tasks receive a strikethrough line for the task text. The second button allows you to remove tasks from the list. If the task list is not empty, two buttons appear. The first one is used to mark all tasks as completed. When all tasks are completed, this button is disabled. The second button is used to toggle the hiding of completed tasks.
+## Technologies used in this project
+
+- HTML, BEM convention
+- CSS, Normalize.css, Grid, media queries
+- CSS, Normalize.css, Grid, Flex, media queries
+- JavaScript ES6+ features
+- Markdown leanguage
+- React, styled components
+
 
 ## Available Scripts
 
@@ -13,11 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -39,32 +57,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
