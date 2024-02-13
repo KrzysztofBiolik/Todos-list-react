@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { StyledForm, Input, Button } from "./styled";
 
 const Form = ({addNewTask}) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -14,11 +15,12 @@ const Form = ({addNewTask}) => {
 
         addNewTask(trimmedNewTaskContent)
         setNewTaskContent("");
+        inputRef.current.focus();
     };
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
-            <Input
+            <Input ref={inputRef}
                 value={newTaskContent}
                 className=" form__input "
                 placeholder="Co jest do zrobienia?"
