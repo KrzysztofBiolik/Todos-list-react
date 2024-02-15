@@ -1,63 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-
-const getInitialTask = () => {
-  const tasksFromLocalStorage = localStorage.getItem("tasks");
-  return tasksFromLocalStorage
-    ? JSON.parse(tasksFromLocalStorage)
-    : []
-};
+import { useTasks } from './useTasks';
 
 
 function App() {
   const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
-    const [tasks, setTasks] = useState(
-      getInitialTask());
-  
-    useEffect(() => {
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-    }, [tasks]);
-
   const toggleHideDoneTasks = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   };
 
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id))
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done }
-      }
-      return task;
-    }));
-  };
-
-  const setAllTaskDone = () => {
-    setTasks(tasks => tasks.map(task => ({
-      ...task,
-      done: true,
-    })));
-  };
-
-  const addNewTask = (newTaskContent) => {
-    setTasks(tasks => [
-      ...tasks,
-      {
-        content: newTaskContent,
-        done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      },
-    ]);
-  };
+  const {
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    setAllTaskDone,
+    addNewTask,
+  } = useTasks();
 
   return (
     <Container>
@@ -81,7 +45,7 @@ function App() {
             tasks={tasks}
             hideDoneTasks={hideDoneTasks}
             toggleHideDoneTasks={toggleHideDoneTasks}
-            setAllTaskDone = {setAllTaskDone}
+            setAllTaskDone={setAllTaskDone}
           />
         }
       />
