@@ -1,23 +1,29 @@
 import { Wrapper, Button } from "./styled";
+import { useSelector } from 'react-redux';
+import { selectTasks } from '../tasksSlice';
 
-const Buttons = ({ tasks, hideDoneTasks, toggleHideDoneTasks, setAllTaskDone }) => (
-    tasks.length > 0 && (
-        <Wrapper className="buttons">
-            <Button
-                className="buttons__button"
-                onClick={toggleHideDoneTasks}
-            >
-                {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
-            </Button>
-            <Button
-                className="buttons__button"
-                disabled={tasks.every(({ done }) => done)}
-                onClick={setAllTaskDone}
-            >
-                Ukończ wszystkie
-            </Button>
+const Buttons = ({ hideDoneTasks, toggleHideDoneTasks, setAllTaskDone }) => {
+    const {tasks} = useSelector(selectTasks);
+    
+    return (
+        <Wrapper>
+            {tasks.length > 0 && (
+                <>
+                    <Button
+                        onClick={toggleHideDoneTasks}
+                    >
+                        {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                    </Button>
+                    <Button
+                        disabled={tasks.every(({ done }) => done)}
+                        onClick={setAllTaskDone}
+                    >
+                        Ukończ wszystkie
+                    </Button>
+                </>
+            )}
         </Wrapper >
     )
-);
+};
 
 export default Buttons;

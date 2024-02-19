@@ -6,6 +6,8 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 import { useTasks } from '../../useTasks';
+import { useSelector } from 'react-redux';
+import { selectTasks } from './tasksSlice';
 
 
 function Tasks() {
@@ -15,12 +17,13 @@ function Tasks() {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   };
 
+  const {tasks} = useSelector(selectTasks)
+
   const {
-    tasks,
+    // tasks,
     removeTask,
     toggleTaskDone,
     setAllTaskDone,
-    addNewTask,
   } = useTasks();
 
   return (
@@ -28,13 +31,12 @@ function Tasks() {
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={<Form/>}
       />
       <Section
         title="Lista zadań"
         body={
           <TaskList
-            tasks={tasks}
             hideDoneTasks={hideDoneTasks}
             removeTask={removeTask}
             toggleTaskDone={toggleTaskDone}
@@ -42,7 +44,6 @@ function Tasks() {
         }
         extraHeaderContent={
           <Buttons
-            tasks={tasks}
             hideDoneTasks={hideDoneTasks}
             toggleHideDoneTasks={toggleHideDoneTasks}
             setAllTaskDone={setAllTaskDone}
