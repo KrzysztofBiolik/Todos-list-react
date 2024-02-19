@@ -12,7 +12,6 @@ function Tasks() {
   const {
     // tasks,
     removeTask,
-    toggleTaskDone,
     setAllTaskDone,
   } = useTasks();
 
@@ -28,7 +27,6 @@ function Tasks() {
         body={
           <TaskList
             removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
           />
         }
         extraHeaderContent={
