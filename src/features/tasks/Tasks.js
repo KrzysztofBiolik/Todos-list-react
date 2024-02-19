@@ -11,7 +11,6 @@ function Tasks() {
 
   const {
     // tasks,
-    removeTask,
     setAllTaskDone,
   } = useTasks();
 
@@ -26,7 +25,6 @@ function Tasks() {
         title="Lista zadań"
         body={
           <TaskList
-            removeTask={removeTask}
           />
         }
         extraHeaderContent={
