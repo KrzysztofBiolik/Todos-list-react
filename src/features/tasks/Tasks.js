@@ -4,15 +4,9 @@ import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
-import { useTasks } from '../../useTasks';
 
 
 function Tasks() {
-
-  const {
-    // tasks,
-    setAllTaskDone,
-  } = useTasks();
 
   return (
     <Container>
@@ -24,13 +18,10 @@ function Tasks() {
       <Section
         title="Lista zadań"
         body={
-          <TaskList
-          />
+          <TaskList />
         }
         extraHeaderContent={
-          <Buttons
-            setAllTaskDone={setAllTaskDone}
-          />
+          <Buttons />
         }
       />
     </Container>
