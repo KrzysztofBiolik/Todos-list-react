@@ -1,16 +1,17 @@
 import { Wrapper, Button } from "./styled";
-import { useSelector } from 'react-redux';
-import { selectTasks } from '../tasksSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectTasks, toggleHideDoneTasks } from '../tasksSlice';
 
-const Buttons = ({ hideDoneTasks, toggleHideDoneTasks, setAllTaskDone }) => {
-    const {tasks} = useSelector(selectTasks);
+const Buttons = ({ setAllTaskDone }) => {
+    const {tasks, hideDoneTasks } = useSelector(selectTasks);
+    const dispatch = useDispatch();
     
     return (
         <Wrapper>
             {tasks.length > 0 && (
                 <>
                     <Button
-                        onClick={toggleHideDoneTasks}
+                        onClick={() => dispatch(toggleHideDoneTasks())}
                     >
                         {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                     </Button>
