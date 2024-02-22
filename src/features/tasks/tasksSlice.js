@@ -48,7 +48,7 @@ export const selectTasksState = state => state.tasks;
 
 
 export const selectTasks = state => selectTasksState(state).tasks;
-export const selectHideDoneTasks = state => selectTasksState(state).hideDone;
+export const selectHideDoneTasks = state => selectTasksState(state).hideDoneTasks;
 export const selectIfEveryTaskDone = state => selectTasks(state).every(({ done }) => done);
 export const selectIfNoTasks = state => selectTasks(state).length === 0;
 
