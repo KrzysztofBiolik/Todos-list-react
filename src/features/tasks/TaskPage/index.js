@@ -12,7 +12,6 @@ function TaskPage() {
 
     return (
         <Container>
-            <p>{id}</p>
             <Header title="Szczegóły zadania" />
             <Section
                 title={task ? task.content : "Nie znaleziono zadania 😢"}
