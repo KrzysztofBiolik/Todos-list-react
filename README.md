@@ -2,27 +2,56 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![Open Graph image](https://github.com/KrzysztofBiolik/Todos-list-react/blob/main/public/images/OG_to-do_list.png?raw=true)
+
 ## Demo
 
 You can see how the to-do list works in the gif below.
 
-![Gif](https://github.com/KrzysztofBiolik/To-do-list-Krzysztof-Biolik/blob/main/images/to-do%20list%20gif.gif?raw=true)
+![Gif](https://github.com/KrzysztofBiolik/Todos-list-react/blob/main/public/images/To-do%20List%20gif.gif?raw=true)
 
 You can try for yourself how the currency exchange works at this link.
 
-[To-do list link]()
+[To-do list link](https://krzysztofbiolik.github.io/Todos-list-react/#/zadania)
 
 ## How does the to-do list work?
 
-The to-do list web page is a form that has one field for entering new tasks and a button that, when clicked, adds a new task and automatically sets the focus to the form field to be able to enter new tasks. The entered tasks appear in the form of a list, and each of them has two interaction buttons. The first button allows you to toggle the execution of the task. Completed tasks receive a strikethrough line for the task text. The second button allows you to remove tasks from the list. If the task list is not empty, two buttons appear. The first one is used to mark all tasks as completed. When all tasks are completed, this button is disabled. The second button is used to toggle the hiding of completed tasks.
+The site has navigation that allows you to switch between the about the author page and the to-do list page.
+
+The About the Author page contains basic information about the author of the to-do list page.
+
+The To-do list page of the task list consists of 3 basic sections:
+
+1.
+- A form for adding a new task to the dynamically generated list.
+- A button for downloading sample tasks
+
+2.
+- A search engine for selecting tasks that contain a given text string
+
+3.
+- A dynamically generated task list, in which each task has a button for marking (or unmarking) the task as completed by crossing it out. The second button is used to remove the task from the list.
+
+- If the task list is not empty, two buttons appear. The first one is used to mark all tasks as completed. When all tasks are completed, this button is disabled. The second button is used to toggle the hiding of completed tasks.
+
+- Clicking on a specific task from the list takes you to a subpage with task details.
+
+
 ## Technologies used in this project
 
-- HTML, BEM convention
-- CSS, Normalize.css, Grid, media queries
-- CSS, Normalize.css, Grid, Flex, media queries
+- JSX (JavaScript XML)
 - JavaScript ES6+ features
+- Normalize.css, CSS Grid, CSS Flexbox, CSS media queries
+- React.js
+- Create React App
+- Controlled components (controlled by state for a single source of truth in behavior)
+- Custom Hooks
+- Local Storage with Redux-Saga
+- Redux (utilizing actions, reducers, and middleware for asynchronous operations)
+- React Router (including BrowserRouter, Route, Switch, and NavLink for navigation)
+- URL-related features like URLSearchParams, useLocation, useHistory: React Router and React Hooks
+JavaScript generator functions (pause and resume functions)
 - Markdown leanguage
-- React, styled components
 
 
 ## Available Scripts
