@@ -10,7 +10,7 @@ You can see how the to-do list works in the gif below.
 
 ![Gif](https://github.com/KrzysztofBiolik/Todos-list-react/blob/main/public/images/To-do%20List%20gif.gif?raw=true)
 
-You can try for yourself how the currency exchange works at this link.
+You can try for yourself how the to-do list works at this link.
 
 [To-do list link](https://krzysztofbiolik.github.io/Todos-list-react/#/zadania)
 
