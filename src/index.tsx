@@ -5,8 +5,8 @@ import { Provider } from "react-redux";
 import { GlobalStyle } from "./GlobalStyle.js";
 import App from './App.js';
 import reportWebVitals from './reportWebVitals.js';
-import { theme } from "./theme.js";
-import store from "./store.js";
+import { theme } from "./theme";
+import store from "./store";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
