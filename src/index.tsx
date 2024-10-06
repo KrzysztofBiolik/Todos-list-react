@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
 import { GlobalStyle } from "./GlobalStyle.js";
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { theme } from "./theme";
-import store from "./store";
+import App from './App.js';
+import reportWebVitals from './reportWebVitals.js';
+import { theme } from "./theme.js";
+import store from "./store.js";
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
