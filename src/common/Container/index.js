@@ -1,9 +1,7 @@
-import { Wrapper } from "./styled";
+import styled from "styled-components";
 
-const Container = ({ children }) => (
-    <Wrapper className="container">
-        {children}
-    </Wrapper>
-)
-
-export default Container;
+export const Container = styled.main`
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+`;

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import { getTaskById } from "../tasksSlice";
-import Container from "../../../common/Container";
+import {Container} from "../../../common/Container";
 
 function TaskPage() {
     const { id } = useParams();
