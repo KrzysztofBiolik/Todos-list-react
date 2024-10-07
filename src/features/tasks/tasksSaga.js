@@ -1,7 +1,7 @@
 import { takeEvery, call, put, select, delay } from "redux-saga/effects";
 import { fetchExampleTasks, setTasks, selectTasks } from "./tasksSlice";
-import { getExampleTasks } from "./getExampleTask";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
+import { getExampleTasks } from "./TasksPage/Buttons/getExampleTask";
 
 function* fetchExampleTasksHandler() {
     try {
