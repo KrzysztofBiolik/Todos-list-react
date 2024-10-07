@@ -54,6 +54,7 @@
     "@babel/eslint-parser": "^7.23.10",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.23.9",
+    "@types/react-router-dom": "^5.3.3",
     "webpack": "^5.90.1"
   }
 }
