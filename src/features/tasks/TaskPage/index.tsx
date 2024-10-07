@@ -1,14 +1,14 @@
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import { getTaskById } from "../tasksSlice";
 import {Container} from "../../../common/Container";
+import { useAppSelector } from "../../../App/hooks";
+import { Task } from "../types";
 
 function TaskPage() {
-    const { id } = useParams();
-    const task = useSelector(state => getTaskById(state, id));
-
+    const { id } = useParams<{id: Task["id"]}>();
+    const task = useAppSelector(state => getTaskById(state, id));
 
     return (
         <Container>
