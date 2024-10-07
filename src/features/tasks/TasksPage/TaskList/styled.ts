@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import {Link} from "react-router-dom"
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
@@ -20,13 +20,13 @@ export const Item = styled.li`
     `}
 `;
 
-export const Content = styled.span`
+export const Content = styled.span<{done?: boolean}>`
     ${({ done }) => done && css`
         text-decoration: line-through;
     `}
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{toggleDone?: boolean; remove?: boolean }>`
     border: none;
     color: ${({ theme }) => theme.color.white};
     width: 30px;
