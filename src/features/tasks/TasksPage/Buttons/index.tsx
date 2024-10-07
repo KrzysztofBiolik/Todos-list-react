@@ -1,6 +1,5 @@
 import { Wrapper} from "./styled";
 import Button from "../Button";
-import { useDispatch, useSelector } from 'react-redux';
 import {
     toggleHideDoneTasks,
     setAllTaskDone,
@@ -8,13 +7,14 @@ import {
     selectIfEveryTaskDone,
     selectIfNoTasks,
 } from '../../tasksSlice';
+import { useAppDispatch, useAppSelector } from "../../../../App/hooks";
 
 const Buttons = () => {
-    const hideDoneTasks = useSelector(selectHideDoneTasks);
-    const ifEveryTaskDone = useSelector(selectIfEveryTaskDone);
-    const ifNoTasks = useSelector(selectIfNoTasks);
+    const hideDoneTasks = useAppSelector(selectHideDoneTasks);
+    const ifEveryTaskDone = useAppSelector(selectIfEveryTaskDone);
+    const ifNoTasks = useAppSelector(selectIfNoTasks);
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     return (
         <Wrapper>
